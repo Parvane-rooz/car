@@ -1,0 +1,234 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:IRANSansWeb ;
+    src: url('../fonts/IRANSansWeb.eot') format(eot);
+    src: url('../fonts/IRANSansWeb.ttf') format(ttf);
+    src: url('../fonts/IRANSansWeb.woff') format(woff);
+    src: url('../fonts/IRANSansWeb.woff2') format(woff2);
+}
+body{
+    font-family: IRANSansWeb;
+    
+}
+.containerr{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+}
+.containerr::before{
+    content: '';
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #ef6c0e,#ff8832);
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    z-index: 6;
+    transition: 1.8s ease-in-out;
+    -webkit-transition: 1.8s ease-in-out;
+    -moz-transition: 1.8s ease-in-out;
+    -ms-transition: 1.8s ease-in-out;
+    -o-transition: 1.8s ease-in-out;
+}
+.forms_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    
+}
+.singin_singup{
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 50%;
+    z-index: 5;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0 5rem;
+    overflow: hidden;
+}
+
+form.sing_in-form{
+    z-index: 2;
+   
+}
+form.sing_up-form{
+    z-index: 1;
+    opacity: 0;
+    
+}
+.title{
+    font-size: 2.2rem;
+    color: #444;
+    margin-bottom: 17px;
+     
+}
+.input_fieled{
+   max-width: 380px;
+   width: 100%;
+   height: 55px;
+   background-color: #f0f0f0;
+   display: grid;
+   grid-template-columns: 15% 85%;
+   margin: 10px 0;
+   padding: 0 0.4rem;
+   border-radius: 55px;
+   
+}
+.input_fieled i{
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    font-size: 1.1rem;
+}
+.input_fieled input{
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    color: #333;
+}
+.input_fieled input::placeholder{
+    background: none;
+    color: #aaa;
+    font-weight: 500;
+}
+.btnn{
+    width: 150px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-radius: 49px;
+    cursor: pointer;
+    background-color: #ef6c0e;
+    color: #fff;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: 0.5;
+    
+}
+.btnn:hover{
+    background-color: #ff8832;
+}
+.social_text{
+    padding: 0.7rem 0;
+    font-size: 0.95rem;
+}
+.social_media{
+    display: flex;
+    justify-content: center;
+
+}
+.social_icon{
+   height: 46px;
+   width: 46px;
+   border: 1px solid #333;
+   margin: 0 0.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #333;
+   font-size: 1.1rem;
+   transition: 0.3s;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+}
+.social_icon a{
+    text-decoration: none;
+    
+}
+.social_icon :hover{
+    color: #ef6c0e;
+    border-color: #ff8832;
+}
+.panels_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.image{
+    width: 100%;
+    transition: 0.9s 0.6s ease-in-out;
+    -webkit-transition: 0.9s 0.6s ease-in-out;
+    -moz-transition: 0.9s 0.6s ease-in-out;
+    -ms-transition: 0.9s 0.6s ease-in-out;
+    -o-transition: 0.9s 0.6s ease-in-out;
+}
+.panel{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 7;
+}
+.panel .content{
+   color: #fff;
+   transition: 0.9s 0.6s ease-in-out;
+   -webkit-transition: 0.9s 0.6s ease-in-out;
+   -moz-transition: 0.9s 0.6s ease-in-out;
+   -ms-transition: 0.9s 0.6s ease-in-out;
+   -o-transition: 0.9s 0.6s ease-in-out;
+}
+.panel h3{
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.5rem;
+ }
+ .panel p{
+    padding: 0.7rem 0;
+    font-size: 0.95rem;
+ }
+.right_panel {
+    padding: 3rem 12% 2rem 17%; 
+    pointer-events: none;
+}
+
+.left_panel{
+    padding: 3rem 17% 2rem 12%; 
+    pointer-events: all;
+}
+.btnn .transparent{
+    margin: 0;
+    background: none;
+    border: 1px solid #fff;
+    width: 130px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.8rem;
+
+}
+.btnn a{
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: 600;
+}
+.right_panel .content,.right_panel .image{
+    transform: translateX(800px);
+ 
+}
